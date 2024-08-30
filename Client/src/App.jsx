@@ -29,7 +29,10 @@ const App = () => {
         },
       ],
     },
-    { path: "/chat", element: <Room socket={socket} /> },
+    {
+      path: "/chat",
+      element: <Room socket={socket} username={username} room={room} />,
+    },
   ]);
   return <RouterProvider router={router} />;
 };
